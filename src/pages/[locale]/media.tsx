@@ -4,11 +4,22 @@ import Layout from '@/components/Layout'
 import { Locale, locales, t } from '@/lib/i18n'
 
 const videos = [
-  {
-    id: 'VWIw_f8e9Pg',
-    title: 'Official Launch Trailer',
-    thumbnail: '5474a45367f20260313113457875.jpg',
-  },
+  { id: 'VWIw_f8e9Pg', title: 'Official Launch Trailer', thumbnail: '5474a45367f20260313113457875.jpg' },
+  { id: 'BOy81crUgtw', title: 'Crimson Desert Trailer', thumbnail: '5b61db495c520260213064632914.jpg' },
+  { id: 'srQ-NtGNBpY', title: 'Crimson Desert Trailer', thumbnail: '58e2b0bf96520260205102154106.jpg' },
+  { id: 'MfZCV8EySac', title: 'Crimson Desert Trailer', thumbnail: '9336e90e58320260129141234143.jpg' },
+  { id: 'ua_7lmxiVV8', title: 'Crimson Desert Trailer', thumbnail: '2ece0ae924820251212075417017.jpg' },
+  { id: '1ItNYP9U1M0', title: 'Crimson Desert Trailer', thumbnail: 'e69f48015e920250321042942502.jpg' },
+  { id: 'uz2m_k6L1q4', title: 'Crimson Desert Trailer', thumbnail: '3e7f31395a520250321043434663.jpg' },
+  { id: 'B2fccBA64Ds', title: 'Crimson Desert Trailer', thumbnail: '64be2fb2b9720250321043537281.jpg' },
+  { id: 'rrQgbLuIzq0', title: 'Crimson Desert Trailer', thumbnail: '6a481b45a6f20250321043057239.jpg' },
+  { id: 'ZIsYk5MtjmY', title: 'Crimson Desert Trailer', thumbnail: '3a1f80d46df20250321043206129.jpg' },
+  { id: 'Tn1igh_q0Wc', title: 'Crimson Desert Trailer', thumbnail: '44a18aba8c520250321042827734.jpg' },
+  { id: 'C2OCmtmwpVA', title: 'Crimson Desert Trailer', thumbnail: '1447cf0cef020250321043639932.jpg' },
+  { id: 'W4Fyv9s4g3M', title: 'Crimson Desert Trailer', thumbnail: '0ed942a9de320250318080953234.jpg' },
+  { id: 'GxiHTuzZ6_w', title: 'Crimson Desert Trailer', thumbnail: '0cc7191f59720250318080933345.jpg' },
+  { id: 'tYQRBqqpV3M', title: 'Crimson Desert Trailer', thumbnail: 'fa399467ddb20250318080923692.jpg' },
+  { id: 'K_sWEhRZaTM', title: 'Crimson Desert Trailer', thumbnail: '24466182d3620250318080855012.jpg' },
 ]
 
 const screenshots = [

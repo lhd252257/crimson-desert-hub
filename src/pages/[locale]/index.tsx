@@ -1,4 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
+import { useState } from 'react'
 import Link from 'next/link'
 import Layout from '@/components/Layout'
 import { Locale, locales, t } from '@/lib/i18n'
@@ -10,6 +11,7 @@ interface HomeProps {
 }
 
 export default function Home({ locale, latestNews }: HomeProps) {
+  const [videoLightbox, setVideoLightbox] = useState<string | null>(null)
   const guideCards = [
     { href: `/${locale}/guides/beginner`, title: t(locale, 'nav_guides_beginner'), icon: '⚔️' },
     { href: `/${locale}/guides/combat`, title: t(locale, 'nav_guides_combat'), icon: '🛡️' },
@@ -75,19 +77,26 @@ export default function Home({ locale, latestNews }: HomeProps) {
 
           {/* 主视频 + 侧边小视频 */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-            {/* 主视频占位 */}
+            {/* 主视频 */}
             <div className="lg:col-span-2">
-              <div className="relative aspect-video bg-brand-card border border-brand-border group cursor-pointer overflow-hidden">
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
+              <div
+                className="relative aspect-video bg-brand-card border border-brand-border group cursor-pointer overflow-hidden"
+                onClick={() => setVideoLightbox('VWIw_f8e9Pg')}
+              >
+                <img
+                  src="/images/media/videos/5474a45367f20260313113457875.jpg"
+                  alt="Official Launch Trailer"
+                  className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
+                />
+                <div className="absolute inset-0 bg-brand-dark/30 group-hover:bg-brand-dark/10 transition-all duration-300 flex items-center justify-center">
                   <div className="w-16 h-16 rounded-full border-2 border-brand-primary flex items-center justify-center group-hover:bg-brand-primary transition-all duration-300">
                     <svg className="w-6 h-6 text-brand-primary group-hover:text-brand-dark ml-1 transition-colors" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M8 5v14l11-7z" />
                     </svg>
                   </div>
-                  <div className="text-center">
-                    <div className="text-brand-primary text-xs tracking-[0.3em] uppercase mb-1" style={{ fontFamily: 'Cinzel, serif' }}>Official Trailer</div>
-                    <div className="text-gray-600 text-xs">— Video coming soon —</div>
-                  </div>
+                </div>
+                <div className="absolute bottom-0 inset-x-0 px-4 py-3 bg-gradient-to-t from-black/70 to-transparent">
+                  <p className="text-xs text-brand-primary tracking-[0.3em] uppercase" style={{ fontFamily: 'Cinzel, serif' }}>Official Launch Trailer</p>
                 </div>
                 <div className="absolute top-3 left-3 w-4 h-4 border-t border-l border-brand-primary opacity-60" />
                 <div className="absolute top-3 right-3 w-4 h-4 border-t border-r border-brand-primary opacity-60" />
@@ -177,6 +186,33 @@ export default function Home({ locale, latestNews }: HomeProps) {
           </Link>
         </div>
       </section>
+
+      {/* Video Lightbox */}
+      {videoLightbox && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/95"
+          onClick={() => setVideoLightbox(null)}
+        >
+          <div className="relative max-w-4xl w-full mx-4" onClick={(e) => e.stopPropagation()}>
+            <div className="aspect-video">
+              <iframe
+                src={`https://www.youtube.com/embed/${videoLightbox}?autoplay=1`}
+                className="w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+            <button
+              onClick={() => setVideoLightbox(null)}
+              className="absolute -top-10 right-0 w-8 h-8 flex items-center justify-center border border-brand-border text-gray-400 hover:text-brand-primary hover:border-brand-primary transition-colors"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      )}
     </Layout>
   )
 }
