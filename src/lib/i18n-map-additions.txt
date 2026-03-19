@@ -1,0 +1,67 @@
+# 需要添加到 i18n.ts 的地图相关翻译
+
+英文 (en):
+    map_size_label: 'Estimated Map Size',
+    map_regions_label: 'Major Regions',
+    map_comparison_label: 'Larger than GTA V',
+    map_explore_title: 'Explore the Regions',
+    map_features_title: 'Map Features',
+    map_transportation: 'Transportation',
+    map_activities: 'Activities',
+    map_key_features: 'Key Features',
+    
+    // Region names
+    map_vice_beach: 'Vice Beach',
+    map_port: 'Port Area',
+    map_suburbs: 'Suburbs',
+    
+    // Region descriptions
+    map_downtown_desc: 'The heart of Vice City featuring skyscrapers, luxury hotels, and bustling streets. Inspired by Miami\'s downtown area.',
+    map_beach_desc: 'Iconic beachfront with art deco architecture, reminiscent of Miami\'s South Beach.',
+    map_everglades_desc: 'Vast swampland with wildlife, hidden camps, and dangerous terrain.',
+    map_keys_desc: 'Chain of tropical islands connected by bridges, perfect for boat exploration.',
+    map_port_desc: 'Industrial port with cargo operations, warehouses, and shipping containers.',
+    map_suburbs_desc: 'Residential neighborhoods with houses, shopping malls, and local businesses.',
+    
+    // Transportation
+    map_trans_highways: 'Highways and expressways',
+    map_trans_bridges: 'Bridges connecting islands',
+    map_trans_airports: 'Airports and helipads',
+    map_trans_marinas: 'Marinas and boat docks',
+    
+    // Activities
+    map_act_racing: 'Street racing circuits',
+    map_act_collectibles: 'Hidden collectibles',
+    map_act_missions: 'Side missions locations',
+    map_act_property: 'Property purchases',
+
+中文 (zh):
+    map_size_label: '预估地图大小',
+    map_regions_label: '主要区域',
+    map_comparison_label: '比 GTA V 大',
+    map_explore_title: '探索各区域',
+    map_features_title: '地图特性',
+    map_transportation: '交通方式',
+    map_activities: '活动内容',
+    map_key_features: '关键特性',
+    
+    map_vice_beach: '罪恶海滩',
+    map_port: '港口区',
+    map_suburbs: '郊区',
+    
+    map_downtown_desc: '罪恶都市的心脏地带，拥有摩天大楼、豪华酒店和繁华街道。灵感来自迈阿密市中心。',
+    map_beach_desc: '标志性的海滨地带，拥有装饰艺术建筑，让人联想到迈阿密南海滩。',
+    map_everglades_desc: '广阔的沼泽地，有野生动物、隐藏营地和危险地形。',
+    map_keys_desc: '由桥梁连接的热带岛链，非常适合乘船探索。',
+    map_port_desc: '工业港口，有货运作业、仓库和集装箱。',
+    map_suburbs_desc: '住宅区，有房屋、购物中心和本地商业。',
+    
+    map_trans_highways: '高速公路和快速路',
+    map_trans_bridges: '连接岛屿的桥梁',
+    map_trans_airports: '机场和直升机停机坪',
+    map_trans_marinas: '码头和船坞',
+    
+    map_act_racing: '街头赛车赛道',
+    map_act_collectibles: '隐藏收藏品',
+    map_act_missions: '支线任务地点',
+    map_act_property: '房产购买',
