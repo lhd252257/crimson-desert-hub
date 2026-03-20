@@ -2,7 +2,7 @@ const fs = require('fs')
 const path = require('path')
 
 const locales = ['en', 'es', 'ko', 'ja', 'de', 'fr', 'zh']
-const baseUrl = 'https://crimsondeserthub.com'
+const baseUrl = 'https://crimson-desert.org'
 
 function generateSitemap() {
   const pages = [
