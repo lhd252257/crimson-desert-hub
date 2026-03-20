@@ -11,108 +11,158 @@ const guideConfig: Record<string, { icon: string; titleKey: string }> = {
 
 // ── Beginner tips data ────────────────────────────────────────────────────────
 
-type Tip = { title: string; body: string }
+type Tip = { title: string; titleZh: string; body: string; bodyZh: string }
 
 const beginnerTips: Tip[] = [
   {
     title: 'Use Focus to Lock On',
+    titleZh: '使用锁定功能',
     body: 'Hold LB (or the equivalent on your platform) to lock onto a target. This keeps the camera fixed on enemies during combat, making it much easier to land attacks and dodge.',
+    bodyZh: '长按LB（或对应平台按键）锁定目标。战斗中摄像机会固定在敌人身上，大幅提升攻击和闪避的准确性。',
   },
   {
     title: 'Manage Your Inventory Early',
+    titleZh: '尽早管理背包',
     body: 'Complete quests to expand your inventory slots. There is no weight limit, so focus on unlocking more slots. Sell or store items you don\'t need to keep things organized.',
+    bodyZh: '完成任务来扩展背包格子。游戏没有重量限制，专注解锁更多格子即可。卖掉或存储不需要的物品保持整洁。',
   },
   {
     title: 'Stealing Requires a Mask',
+    titleZh: '偷窃需要戴面具',
     body: 'You must equip a mask before stealing from NPCs. If you get caught, greet NPCs to restore your reputation — ignoring them will make things worse.',
+    bodyZh: '从NPC处偷窃前必须装备面具。被抓到后，主动打招呼可以恢复声望——无视NPC只会让情况更糟。',
   },
   {
     title: 'Fast Travel via Abyss Nexus',
+    titleZh: '通过深渊节点快速旅行',
     body: 'Look for "Mysterious Energy" question mark icons on the map to find Abyss Nexus points. Activating them unlocks fast travel nodes across Pywel.',
+    bodyZh: '在地图上寻找"神秘能量"问号图标来找到深渊节点。激活后可解锁Pywel各地的快速旅行点。',
   },
   {
     title: 'Aerial Travel from Sky Islands',
+    titleZh: '从天空岛屿空中旅行',
     body: 'You can glide from sky islands using Damiane\'s Parasol Machine. Hovering doesn\'t drain stamina — only moving does. Spread your wings just before landing to avoid fall damage.',
+    bodyZh: '可以用Damiane的机械伞从天空岛屿滑翔。悬停不消耗体力——只有移动才消耗。落地前展开伞可避免坠落伤害。',
   },
   {
     title: 'Skill Tree Has No Prerequisites',
+    titleZh: '技能树无前置条件',
     body: 'You can unlock skills in any order — there are no strict prerequisites. Prioritize Health and Stamina upgrades first, then grab Double Jump and Axiom Force (levels 2–3) early.',
+    bodyZh: '可以按任意顺序解锁技能——没有严格的前置条件。优先升级生命值和体力，然后尽早获取二段跳和公理之力（2-3级）。',
   },
   {
     title: 'Explore Before Progressing the Story',
+    titleZh: '推进主线前先探索',
     body: 'The world is packed with side content. Explore regions thoroughly before advancing the main quest — you\'ll find better gear, skill points, and faction quests that make boss fights easier.',
+    bodyZh: '世界中充满支线内容。推进主线前彻底探索各地区——你会找到更好的装备、技能点和派系任务，让BOSS战更轻松。',
   },
   {
     title: 'Upgrade Your Gear Regularly',
+    titleZh: '定期升级装备',
     body: 'Visit Blacksmiths to refine your weapons and armor. Aim for Refinement Level 4+ before tackling major bosses. Higher refinement makes a significant difference in damage output.',
+    bodyZh: '前往铁匠铺精炼武器和护甲。挑战主要BOSS前争取达到精炼4级以上。更高的精炼等级对伤害输出有显著影响。',
   },
   {
     title: 'Cook and Carry Food',
+    titleZh: '烹饪并携带食物',
     body: 'Cooked meat and food items restore health and grant buffs. Always carry at least 100 pieces of roasted meat. You can eat while attacking, so there\'s no reason not to heal mid-fight.',
+    bodyZh: '熟肉和食物可以恢复生命值并提供增益。随时携带至少100块烤肉。攻击时也可以进食，所以战斗中没有理由不回血。',
   },
   {
     title: 'Learn to Perfect Dodge',
+    titleZh: '学会完美闪避',
     body: 'Dodging at the exact moment an attack lands triggers a Perfect Dodge, slowing time briefly and opening a window for a powerful counter. Practice this against weaker enemies first.',
+    bodyZh: '在攻击命中的精确时刻闪避可触发完美闪避，短暂减速时间并开启强力反击窗口。先在弱敌身上练习。',
   },
   {
     title: 'Parrying Staggers Enemies',
+    titleZh: '格挡可硬直敌人',
     body: 'Blocking at the right moment parries an attack and staggers the enemy. Parrying is especially effective against human enemies and opens them up for a follow-up combo.',
+    bodyZh: '在正确时机格挡可以招架攻击并硬直敌人。格挡对人类敌人尤其有效，并为后续连击创造机会。',
   },
   {
     title: 'Switch Characters for Different Situations',
+    titleZh: '根据情况切换角色',
     body: 'Each playable character has unique strengths. Kliff excels at balanced melee, Damiane is fast and versatile with ranged options, and Oongka deals massive AoE damage. Swap based on the encounter.',
+    bodyZh: '每个可玩角色都有独特优势。Kliff擅长均衡近战，Damiane快速多变且有远程选项，Oongka造成巨大范围伤害。根据遭遇战切换角色。',
   },
   {
     title: 'Equip Abyss Cores for Powerful Modifiers',
+    titleZh: '装备深渊核心获取强力词条',
     body: 'Abyss Cores slot into your weapons and grant powerful passive effects. Find Elowen the Witch as you progress through the story to equip and swap your Abyss Gear loadout.',
+    bodyZh: '深渊核心可嵌入武器并提供强力被动效果。随着剧情推进找到女巫Elowen来装备和更换深渊装备配置。',
   },
   {
     title: 'Use the Camp System',
+    titleZh: '善用营地系统',
     body: 'Setting up camp lets you rest, cook, and manage your party. Resting at camp restores health and stamina fully. Use it between tough encounters instead of burning through consumables.',
+    bodyZh: '扎营可以休息、烹饪和管理队伍。在营地休息可完全恢复生命值和体力。在艰难战斗之间使用，而不是消耗大量消耗品。',
   },
   {
     title: 'Reputation Matters',
+    titleZh: '声望很重要',
     body: 'Your reputation with factions affects quest availability and NPC interactions. Avoid unnecessary crimes in settlements, and complete faction quests to build standing with key groups.',
+    bodyZh: '与派系的声望影响任务可用性和NPC互动。避免在定居点犯不必要的罪行，完成派系任务来提升与关键团体的地位。',
   },
   {
     title: 'Check the Challenges Menu',
+    titleZh: '查看挑战菜单',
     body: 'The Challenges menu tracks combat mastery tasks that reward skill points and gear. Complete them alongside normal play — many unlock naturally as you fight different enemy types.',
+    bodyZh: '挑战菜单追踪奖励技能点和装备的战斗精通任务。在正常游玩时顺带完成——许多任务在对抗不同敌人类型时自然解锁。',
   },
   {
     title: 'Horses Need Care Too',
+    titleZh: '马匹也需要照料',
     body: 'Your horse can be injured in combat. Carry horse medicine and heal it regularly. A healthy horse is faster and more responsive, which matters a lot during mounted combat.',
+    bodyZh: '你的马在战斗中可能受伤。携带马药并定期治疗。健康的马更快更灵敏，在骑乘战斗中非常重要。',
   },
   {
     title: 'Wanted System — Stay Aware',
+    titleZh: '通缉系统——保持警觉',
     body: 'Committing crimes raises your Wanted level. Guards will attack on sight at high levels. Either pay off your bounty at a settlement or lay low until it clears.',
+    bodyZh: '犯罪会提升通缉等级。等级高时守卫会见面就攻击。在定居点缴清赏金或低调行事直到通缉解除。',
   },
   {
     title: 'Mysterious Energies Unlock Bonuses',
+    titleZh: '神秘能量解锁奖励',
     body: 'Collecting Mysterious Energies (the question mark icons) does more than unlock fast travel — they also reveal hidden areas and grant passive bonuses. Prioritize them when exploring new regions.',
+    bodyZh: '收集神秘能量（问号图标）不仅解锁快速旅行——还能揭示隐藏区域并提供被动奖励。探索新地区时优先收集。',
   },
   {
     title: 'Don\'t Ignore Faction Quests',
+    titleZh: '不要忽视派系任务',
     body: 'Faction quests (side quests tied to groups in Pywel) give unique rewards, lore, and sometimes unlock new characters or abilities. They\'re worth doing before finishing each chapter.',
+    bodyZh: '派系任务（与Pywel团体相关的支线任务）提供独特奖励、世界观内容，有时还能解锁新角色或能力。在完成每章前值得去做。',
   },
   {
     title: 'Stamina Management in Combat',
+    titleZh: '战斗中的体力管理',
     body: 'Sprinting, dodging, and some attacks consume stamina. Don\'t spam dodge rolls — you\'ll be left vulnerable. Upgrade stamina early and learn enemy attack patterns to dodge only when needed.',
+    bodyZh: '冲刺、闪避和部分攻击消耗体力。不要乱刷翻滚——会让你陷入危险。尽早升级体力，学习敌人攻击规律，只在必要时闪避。',
   },
   {
     title: 'Loot Everything',
+    titleZh: '拾取所有战利品',
     body: 'Enemies, chests, and the environment drop crafting materials, weapons, and consumables. With no weight limit, there\'s no reason to leave loot behind. Sell duplicates to Blacksmiths for coin.',
+    bodyZh: '敌人、宝箱和环境会掉落制作材料、武器和消耗品。没有重量限制，没有理由留下战利品。将重复物品卖给铁匠换取金币。',
   },
   {
     title: 'Save Unique Weapons',
+    titleZh: '保留独特武器',
     body: 'Unique weapons dropped by bosses have powerful built-in modifiers and cannot be upgraded with duplicates. Keep them — they\'re often best-in-slot for specific builds even late in the game.',
+    bodyZh: 'BOSS掉落的独特武器有强力内置词条，无法用重复品升级。保留它们——即使在游戏后期，它们通常也是特定配装的最佳选择。',
   },
   {
     title: 'Use the Environment',
+    titleZh: '利用环境',
     body: 'Pywel\'s world is interactive. Knock enemies off ledges, use explosive barrels, and take high ground for ranged advantage. Environmental kills count toward challenges too.',
+    bodyZh: 'Pywel的世界是互动的。将敌人击落悬崖、使用爆炸桶、占据高地获得远程优势。环境击杀也计入挑战进度。',
   },
   {
     title: 'Talk to Everyone',
+    titleZh: '与所有人交谈',
     body: 'NPCs often give hints about hidden quests, treasure locations, and lore. Some side quests only trigger after speaking to specific characters. Don\'t rush past settlements.',
+    bodyZh: 'NPC经常提供隐藏任务、宝藏位置和世界观的线索。部分支线任务只有与特定角色交谈后才会触发。不要匆忙路过定居点。',
   },
 ]
 
@@ -120,107 +170,155 @@ const beginnerTips: Tip[] = [
 
 type Boss = {
   name: string
+  nameZh: string
   type: 'main' | 'optional'
   chapter?: string
   location: string
+  locationZh: string
   reward: string
+  rewardZh: string
   strategy: string
+  strategyZh: string
 }
 
 const bossList: Boss[] = [
   {
     name: 'Matthias',
+    nameZh: 'Matthias',
     type: 'main',
     chapter: 'Chapter 1',
     location: 'The First Encounter',
+    locationZh: '初次相遇',
     reward: 'Sword of the Lord (unique weapon)',
+    rewardZh: '主之剑（独特武器）',
     strategy: 'An aggressive human fighter. Watch for his two-hit combo followed by a grab — dodge sideways on the grab. Parrying his sword strikes staggers him and opens a punish window. Keep your shield up during his charge attack.',
+    strategyZh: '一名进攻型人类战士。注意他的二连击后接擒拿——擒拿时向侧面闪避。格挡他的剑击可以硬直他并开启惩罚窗口。他冲锋攻击时保持盾牌举起。',
   },
   {
     name: 'Kailok the Hornsplitter',
+    nameZh: '裂角者凯洛克',
     type: 'main',
     chapter: 'Chapter 2',
     location: 'Golden Greed',
+    locationZh: '黄金贪欲',
     reward: 'Kailok\'s Horn (crafting material), skill points',
+    rewardZh: '凯洛克之角（制作材料），技能点',
     strategy: 'A large beast with sweeping horn attacks. Stay to his side — his frontal charge covers a lot of ground. When he rears up, roll backward to avoid the slam. His horns glow red before an unblockable attack; dodge immediately.',
+    strategyZh: '一头拥有横扫角击的大型野兽。待在它侧面——正面冲锋覆盖范围很大。它后仰时向后翻滚避开猛击。角在不可格挡攻击前会发红光，立即闪避。',
   },
   {
     name: 'Reed Devil',
+    nameZh: '芦苇恶魔',
     type: 'main',
     chapter: 'Chapter 3',
     location: 'Howling Hill',
+    locationZh: '嚎叫山丘',
     reward: 'Reed Devil\'s Mask (unique equipment), coins',
+    rewardZh: '芦苇恶魔之面具（独特装备），金币',
     strategy: 'Fast and evasive. Uses poison attacks — bring antidotes or poison-resist gear. He teleports short distances; don\'t chase, wait for him to reappear and punish. His scythe spin is telegraphed by a green glow — back off.',
+    strategyZh: '快速且善于闪避。使用毒素攻击——携带解毒剂或抗毒装备。他会短距离传送，不要追击，等他重新出现后惩罚。镰刀旋转前会有绿色光效——后退。',
   },
   {
     name: 'Tenebrum',
+    nameZh: '暗影腾布鲁姆',
     type: 'main',
     chapter: 'Chapter 4',
     location: 'The Price of Knowledge',
+    locationZh: '知识的代价',
     reward: 'Tenebrum Core (Abyss Gear material)',
+    rewardZh: '腾布鲁姆核心（深渊装备材料）',
     strategy: 'A shadow-type boss that splits into copies. Attack the copy with the glowing core — the others deal no damage but can still stagger you. When the arena goes dark, stop moving and listen for audio cues before his lunge.',
+    strategyZh: '一个会分裂成复制体的暗影型BOSS。攻击发光核心的那个复制体——其他复制体不造成伤害但仍能硬直你。竞技场变暗时停止移动，在他突进前聆听音效提示。',
   },
   {
     name: 'Kearush the Slayer',
+    nameZh: '屠者凯拉什',
     type: 'main',
     chapter: 'Chapter 5',
     location: 'Guest Unbidden',
+    locationZh: '不速之客',
     reward: 'Kearush\'s Blade (unique weapon), large coin reward',
+    rewardZh: '凯拉什之刃（独特武器），大量金币',
     strategy: 'A heavily armored knight. His attacks are slow but hit hard — one wrong dodge and you\'re dead. Use Spear or Greatsword for poke damage. When his armor cracks (around 50% HP), he speeds up significantly. Save your healing items for phase two.',
+    strategyZh: '一名重甲骑士。攻击缓慢但伤害极高——一次错误闪避就可能致命。使用长矛或巨剑进行戳刺伤害。护甲破裂时（约50%血量）他会大幅加速。将治疗道具留到第二阶段。',
   },
   {
     name: 'Crowcaller',
+    nameZh: '唤鸦者',
     type: 'main',
     chapter: 'Chapter 6',
     location: 'Cracks in the Shield',
+    locationZh: '盾牌的裂缝',
     reward: 'Crowcaller\'s Feather (unique accessory)',
+    rewardZh: '唤鸦者之羽（独特饰品）',
     strategy: 'A flying boss that summons crow minions. Use ranged weapons (Rifle or Bow) to deal damage while he\'s airborne. Kill minions quickly — they stack a debuff that reduces your damage. He lands when below 40% HP; switch to melee for the finish.',
+    strategyZh: '一个会召唤乌鸦小兵的飞行BOSS。他在空中时使用远程武器（步枪或弓）造成伤害。快速消灭小兵——它们会叠加减少你伤害的减益效果。血量低于40%时他会落地，切换近战收尾。',
   },
   {
     name: 'Cassius Morten',
+    nameZh: '卡修斯·莫顿',
     type: 'main',
     chapter: 'Chapter 6',
     location: 'Cracks in the Shield',
+    locationZh: '盾牌的裂缝',
     reward: 'Cassius\'s Signet (story reward), major skill point cache',
+    rewardZh: '卡修斯印记（剧情奖励），大量技能点',
     strategy: 'The chapter\'s final boss. Two phases: first as a swordsman, then empowered with dark energy. In phase one, parry his thrusts for big punish windows. In phase two, his attacks leave dark pools on the ground — avoid standing in them. Keep moving and use your best Abyss Core loadout.',
+    strategyZh: '本章最终BOSS。两个阶段：先是剑客形态，然后被黑暗能量强化。第一阶段格挡他的突刺获得大惩罚窗口。第二阶段攻击会在地面留下黑暗水池——避免站在其中。保持移动并使用最佳深渊核心配置。',
   },
   {
     name: "Marni's Excavatron",
+    nameZh: '马尔尼的挖掘机甲',
     type: 'optional',
     location: 'Marni\'s Workshop (side quest)',
+    locationZh: '马尔尼工坊（支线任务）',
     reward: 'Excavatron Parts (crafting), coins',
+    rewardZh: '挖掘机甲零件（制作材料），金币',
     strategy: 'A mechanical construct. Its drill arm has a long wind-up — dodge to the side, not backward. Destroy the two side cannons first to remove its ranged attacks. After both cannons are down, it becomes purely melee and much easier to handle.',
+    strategyZh: '一个机械构造体。钻臂有很长的前摇——向侧面闪避，而非向后。先摧毁两侧炮台以消除远程攻击。两门炮都摧毁后，它变为纯近战，容易处理得多。',
   },
   {
     name: 'Crimson Nightmare',
+    nameZh: '深红噩梦',
     type: 'optional',
     location: 'Hidden cave, eastern Pywel',
+    locationZh: 'Pywel东部隐藏洞穴',
     reward: 'Nightmare Shard (Abyss Gear), rare dye',
+    rewardZh: '噩梦碎片（深渊装备），稀有染料',
     strategy: 'A nightmare creature that inflicts fear debuffs. Fear reduces your damage — eat food that grants mental resistance before the fight. It has no physical weak point; focus on dodging its wide sweeping claws and punishing after each combo ends.',
+    strategyZh: '一个施加恐惧减益的噩梦生物。恐惧会降低你的伤害——战前食用提供精神抗性的食物。它没有物理弱点，专注闪避其宽幅横扫爪击，并在每段连击结束后惩罚。',
   },
   {
     name: 'Saigord the Staglord',
+    nameZh: '鹿主萨戈德',
     type: 'optional',
     location: 'Howling Hill forest (faction quest)',
+    locationZh: '嚎叫山丘森林（派系任务）',
     reward: "Staglord's Shield (unique shield), Staglord's Banner Pike",
+    rewardZh: '鹿主之盾（独特盾牌），鹿主旗枪',
     strategy: 'A massive stag-mounted warrior. His mount charges in a straight line — sidestep early. When dismounted (around 60% HP), Saigord fights on foot with a pike. His overhead slam has a large AoE; roll through it rather than away. The shield reward makes this fight very worth doing early.',
+    strategyZh: '一名骑乘巨鹿的战士。坐骑直线冲锋——提前侧步躲避。下马后（约60%血量），萨戈德持枪步战。头顶猛击有大范围AOE，向前翻滚穿过而非向后躲。盾牌奖励使这场战斗非常值得尽早完成。',
   },
   {
     name: "Antumbra's Sword",
+    nameZh: '安顿布拉之剑',
     type: 'optional',
     location: 'Abyss Nexus dungeon',
+    locationZh: '深渊节点地下城',
     reward: 'Antumbra Core (powerful Abyss Gear)',
+    rewardZh: '安顿布拉核心（强力深渊装备）',
     strategy: 'A sentient weapon construct. It mirrors your attack patterns — if you spam the same combo, it will counter it. Vary your approach. When it glows white, it\'s charging an unblockable beam; get behind a pillar. The Antumbra Core reward is one of the best in the game.',
+    strategyZh: '一个有意识的武器构造体。它会镜像你的攻击模式——如果你重复同一连击，它会反制。变换攻击方式。发白光时正在蓄力不可格挡光束，躲到柱子后面。安顿布拉核心是游戏中最好的奖励之一。',
   },
 ]
 
-const generalBossTips = [
-  'Carry 100+ roasted meat — you can eat while attacking, so there\'s no reason to stop healing.',
-  'Upgrade your weapons to Refinement Level 4+ before major bosses. The damage difference is significant.',
-  'Save unique weapons dropped by bosses — they often have the best modifiers for specific builds.',
-  'Learn the boss\'s attack pattern before committing to offense. Most bosses have a 3–4 hit combo followed by a recovery window.',
-  'Perfect Dodge (dodge at the last moment) slows time and opens a big punish window on most bosses.',
-  'Equip your best Abyss Core loadout before boss fights — visit Elowen the Witch to swap if needed.',
+const generalBossTips: { en: string; zh: string }[] = [
+  { en: 'Carry 100+ roasted meat — you can eat while attacking, so there\'s no reason to stop healing.', zh: '携带100块以上烤肉——攻击时也可以进食，没有理由停止回血。' },
+  { en: 'Upgrade your weapons to Refinement Level 4+ before major bosses. The damage difference is significant.', zh: '挑战主要BOSS前将武器升级到精炼4级以上。伤害差距非常显著。' },
+  { en: 'Save unique weapons dropped by bosses — they often have the best modifiers for specific builds.', zh: '保留BOSS掉落的独特武器——它们通常拥有特定配装的最佳词条。' },
+  { en: 'Learn the boss\'s attack pattern before committing to offense. Most bosses have a 3–4 hit combo followed by a recovery window.', zh: '在全力进攻前先学习BOSS的攻击规律。大多数BOSS有3-4段连击后跟着一个恢复窗口。' },
+  { en: 'Perfect Dodge (dodge at the last moment) slows time and opens a big punish window on most bosses.', zh: '完美闪避（最后时刻闪避）会减速时间，对大多数BOSS开启大惩罚窗口。' },
+  { en: 'Equip your best Abyss Core loadout before boss fights — visit Elowen the Witch to swap if needed.', zh: 'BOSS战前装备最佳深渊核心配置——如需更换可前往女巫Elowen处。' },
 ]
 
 // ── Combat guide data ─────────────────────────────────────────────────────────
@@ -394,8 +492,8 @@ function BeginnerGuide({ locale }: { locale: Locale }) {
                 {String(i + 1).padStart(2, '0')}
               </span>
               <div>
-                <div className="text-white font-bold text-sm mb-1" style={{ fontFamily: 'Cinzel, serif' }}>{tip.title}</div>
-                <p className="text-gray-400 text-sm leading-relaxed">{tip.body}</p>
+                <div className="text-white font-bold text-sm mb-1" style={{ fontFamily: 'Cinzel, serif' }}>{isZh ? tip.titleZh : tip.title}</div>
+                <p className="text-gray-400 text-sm leading-relaxed">{isZh ? tip.bodyZh : tip.body}</p>
               </div>
             </div>
           </div>
@@ -434,7 +532,7 @@ function BossGuide({ locale }: { locale: Locale }) {
           {generalBossTips.map((tip, i) => (
             <li key={i} className="flex items-start gap-3 text-gray-400 text-sm leading-relaxed">
               <span className="text-brand-primary mt-0.5 shrink-0">⚔</span>
-              {tip}
+              {isZh ? tip.zh : tip.en}
             </li>
           ))}
         </ul>
@@ -541,7 +639,7 @@ function BossCard({ boss, isZh }: { boss: Boss; isZh: boolean }) {
   return (
     <div className="bg-brand-card border border-brand-border overflow-hidden hover:border-brand-primary/50 transition-colors">
       <div className="flex items-center gap-3 bg-black/30 border-b border-brand-border px-5 py-3">
-        <span className="text-white font-bold" style={{ fontFamily: 'Cinzel, serif' }}>{boss.name}</span>
+        <span className="text-white font-bold" style={{ fontFamily: 'Cinzel, serif' }}>{isZh ? boss.nameZh : boss.name}</span>
         {boss.chapter && (
           <span className="text-brand-primary text-xs font-bold tracking-widest uppercase">{boss.chapter}</span>
         )}
@@ -553,18 +651,18 @@ function BossCard({ boss, isZh }: { boss: Boss; isZh: boolean }) {
         <div className="flex flex-wrap gap-4 text-xs">
           <div>
             <span className="text-brand-muted uppercase tracking-widest">{isZh ? '地点 ' : 'Location '}</span>
-            <span className="text-gray-300">{boss.location}</span>
+            <span className="text-gray-300">{isZh ? boss.locationZh : boss.location}</span>
           </div>
           <div>
             <span className="text-brand-muted uppercase tracking-widest">{isZh ? '奖励 ' : 'Reward '}</span>
-            <span className="text-gray-300">{boss.reward}</span>
+            <span className="text-gray-300">{isZh ? boss.rewardZh : boss.reward}</span>
           </div>
         </div>
         <div>
           <div className="text-brand-primary text-xs tracking-widest uppercase mb-2 font-bold">
             {isZh ? '攻略策略' : 'Strategy'}
           </div>
-          <p className="text-gray-400 text-sm leading-relaxed">{boss.strategy}</p>
+          <p className="text-gray-400 text-sm leading-relaxed">{isZh ? boss.strategyZh : boss.strategy}</p>
         </div>
       </div>
     </div>
