@@ -180,7 +180,9 @@ export const translations: Record<Locale, Record<string, string>> = {
   },
 
   ko: {
+    nav_home: '홈',
     nav_news: '뉴스',
+    nav_media: '미디어',
     nav_guides: '공략',
     nav_characters: '캐릭터',
     nav_database: '데이터베이스',
@@ -214,6 +216,10 @@ export const translations: Record<Locale, Record<string, string>> = {
     section_characters: '캐릭터',
     section_media: '미디어',
     media_subtitle: '트레일러, 게임플레이 및 공식 영상',
+    media_screenshots: '스크린샷',
+    media_videos: '동영상',
+    media_wallpapers: '배경화면',
+    media_view_full: '전체 크기 보기',
 
     char_intro: '크림슨 데저트의 영웅들을 만나보세요 — Kliff와 회색갈기 용병단이 Pywel에서 잃어버린 것을 되찾기 위해 싸웁니다.',
     char_mcclaren_role: '주인공',
@@ -252,7 +258,9 @@ export const translations: Record<Locale, Record<string, string>> = {
   },
 
   ja: {
+    nav_home: 'ホーム',
     nav_news: 'ニュース',
+    nav_media: 'メディア',
     nav_guides: 'ガイド',
     nav_characters: 'キャラクター',
     nav_database: 'データベース',
@@ -286,6 +294,10 @@ export const translations: Record<Locale, Record<string, string>> = {
     section_characters: 'キャラクター',
     section_media: 'メディア',
     media_subtitle: 'トレーラー、ゲームプレイ、公式動画',
+    media_screenshots: 'スクリーンショット',
+    media_videos: '動画',
+    media_wallpapers: '壁紙',
+    media_view_full: 'フルサイズで見る',
 
     char_intro: 'クリムゾン・デザートの英雄たちに会いましょう — KliffとGrey Mane傭兵団がPywelで失ったものを取り戻すために戦います。',
     char_mcclaren_role: '主人公',
@@ -324,7 +336,9 @@ export const translations: Record<Locale, Record<string, string>> = {
   },
 
   de: {
+    nav_home: 'Startseite',
     nav_news: 'Neuigkeiten',
+    nav_media: 'Medien',
     nav_guides: 'Guides',
     nav_characters: 'Charaktere',
     nav_database: 'Datenbank',
@@ -358,6 +372,10 @@ export const translations: Record<Locale, Record<string, string>> = {
     section_characters: 'Charaktere',
     section_media: 'Medien',
     media_subtitle: 'Trailer, Gameplay und offizielle Videos',
+    media_screenshots: 'Screenshots',
+    media_videos: 'Videos',
+    media_wallpapers: 'Hintergrundbilder',
+    media_view_full: 'In voller Größe anzeigen',
 
     char_intro: 'Lernen Sie die Helden von Crimson Desert kennen — Kliff und die Grey Mane kämpfen darum, das Verlorene in Pywel zurückzugewinnen.',
     char_mcclaren_role: 'Hauptprotagonist',
@@ -396,7 +414,9 @@ export const translations: Record<Locale, Record<string, string>> = {
   },
 
   fr: {
+    nav_home: 'Accueil',
     nav_news: 'Actualités',
+    nav_media: 'Médias',
     nav_guides: 'Guides',
     nav_characters: 'Personnages',
     nav_database: 'Base de données',
@@ -430,6 +450,10 @@ export const translations: Record<Locale, Record<string, string>> = {
     section_characters: 'Personnages',
     section_media: 'Médias',
     media_subtitle: 'Bandes-annonces, gameplay et vidéos officielles',
+    media_screenshots: 'Captures d\'écran',
+    media_videos: 'Vidéos',
+    media_wallpapers: 'Fonds d\'écran',
+    media_view_full: 'Voir en plein écran',
 
     char_intro: 'Rencontrez les héros de Crimson Desert — Kliff et les Grey Mane se battent pour récupérer ce qui a été perdu à Pywel.',
     char_mcclaren_role: 'Protagoniste principal',
@@ -468,7 +492,9 @@ export const translations: Record<Locale, Record<string, string>> = {
   },
 
   es: {
+    nav_home: 'Inicio',
     nav_news: 'Noticias',
+    nav_media: 'Medios',
     nav_guides: 'Guías',
     nav_characters: 'Personajes',
     nav_database: 'Base de datos',
@@ -502,6 +528,10 @@ export const translations: Record<Locale, Record<string, string>> = {
     section_characters: 'Personajes',
     section_media: 'Medios',
     media_subtitle: 'Tráilers, gameplay y vídeos oficiales',
+    media_screenshots: 'Capturas de pantalla',
+    media_videos: 'Vídeos',
+    media_wallpapers: 'Fondos de pantalla',
+    media_view_full: 'Ver tamaño completo',
 
     char_intro: 'Conoce a los héroes de Crimson Desert — Kliff y los Grey Mane luchan por recuperar lo perdido en Pywel.',
     char_mcclaren_role: 'Protagonista principal',
