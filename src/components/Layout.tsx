@@ -28,7 +28,7 @@ export default function Layout({ children, locale, title, description, jsonLd }:
   const defaultDesc = 'Crimson Desert guides, news, characters, lore and database. Your #1 unofficial fan hub.'
   const desc = description ?? defaultDesc
   const canonicalUrl = `${BASE_URL}${router.asPath}`
-  const ogImage = `${BASE_URL}/images/og-cover.jpg`
+  const ogImage = `${BASE_URL}/images/backgroundImages/bgm.png`
 
   return (
     <>
