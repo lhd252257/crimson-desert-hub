@@ -4,6 +4,7 @@ import Layout from '@/components/Layout'
 import { Locale, locales, t } from '@/lib/i18n'
 
 const videos = [
+  { id: 'WlZHx9G1CrI', title: 'Crimson Desert Full Walkthrough', thumbnail: '' },
   { id: 'VWIw_f8e9Pg', title: 'Official Launch Trailer', thumbnail: '5474a45367f20260313113457875.jpg' },
   { id: 'BOy81crUgtw', title: 'Crimson Desert Trailer', thumbnail: '5b61db495c520260213064632914.jpg' },
   { id: 'srQ-NtGNBpY', title: 'Crimson Desert Trailer', thumbnail: '58e2b0bf96520260205102154106.jpg' },
@@ -167,7 +168,7 @@ export default function MediaPage({ locale }: { locale: Locale }) {
                 onClick={() => setVideoLightbox(video.id)}
               >
                 <img
-                  src={`/images/media/videos/${video.thumbnail}`}
+                  src={video.thumbnail ? `/images/media/videos/${video.thumbnail}` : `https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
                   alt={video.title}
                   className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
                 />
