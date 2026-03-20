@@ -69,6 +69,8 @@ function generateSitemap() {
 
   const outDir = path.join(__dirname, '../out')
   fs.writeFileSync(path.join(outDir, 'sitemap.xml'), sitemap)
+  // 同时输出到根目录
+  fs.writeFileSync(path.join(__dirname, '../sitemap.xml'), sitemap)
   console.log('✓ Sitemap generated successfully')
 }
 
