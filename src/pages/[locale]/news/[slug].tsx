@@ -58,6 +58,23 @@ export default function NewsPostPage({ locale, post, htmlContent, relatedPosts }
           dangerouslySetInnerHTML={{ __html: htmlContent }}
         />
 
+        {post.externalUrl && (
+          <div className="mt-8 pt-6 border-t border-brand-border">
+            <a
+              href={post.externalUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 border border-brand-primary text-brand-primary text-sm tracking-widest uppercase hover:bg-brand-primary hover:text-brand-dark transition-all"
+              style={{ fontFamily: 'Cinzel, serif' }}
+            >
+              查看官方原文
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+        )}
+
         <SocialShare url={`/${locale}/news/${post.slug}`} title={post.title} locale={locale} />
       </article>
 

@@ -11,6 +11,7 @@ export interface NewsPost {
   date: string
   excerpt: string
   coverImage?: string
+  externalUrl?: string
   content: string
   locale: Locale
 }
@@ -32,6 +33,7 @@ export function getNewsPosts(locale: Locale): NewsPost[] {
         date: data.date ?? '',
         excerpt: data.excerpt ?? '',
         coverImage: data.coverImage ?? null,
+        externalUrl: data.externalUrl ?? null,
         content,
         locale,
       }
