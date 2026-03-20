@@ -223,6 +223,152 @@ const generalBossTips = [
   'Equip your best Abyss Core loadout before boss fights — visit Elowen the Witch to swap if needed.',
 ]
 
+// ── Combat guide data ─────────────────────────────────────────────────────────
+
+type CombatMechanic = { name: string; nameZh: string; desc: string; descZh: string; tips: string[]; tipsZh: string[] }
+
+const combatMechanics: CombatMechanic[] = [
+  {
+    name: 'Light Attack',
+    nameZh: '轻攻击',
+    desc: 'Fast, low-stamina strikes that chain into combos. Tap the attack button repeatedly to execute multi-hit sequences. Light attacks are your bread-and-butter for building pressure and filling gaps between heavier moves.',
+    descZh: '快速、低耗体力的攻击，可连接成连击。连续点击攻击键执行多段连击。轻攻击是施压和衔接重攻击的基础。',
+    tips: [
+      'Chain 3–4 light attacks before finishing with a heavy for maximum damage.',
+      'Light attacks can be cancelled into a dodge at any point in the chain.',
+      'Some enemies have armor that reduces light attack damage — switch to heavy attacks against them.',
+    ],
+    tipsZh: [
+      '连续3-4次轻攻击后接重攻击，伤害最大化。',
+      '轻攻击连击中随时可以取消接翻滚。',
+      '部分敌人有护甲会减少轻攻击伤害，对其改用重攻击。',
+    ],
+  },
+  {
+    name: 'Heavy Attack',
+    nameZh: '重攻击',
+    desc: 'Charged strikes that deal high damage and break enemy guard. Hold the attack button to charge. Heavy attacks are slower but stagger most enemies and deal bonus damage to blocking foes.',
+    descZh: '蓄力攻击，伤害高且可破防。长按攻击键蓄力。重攻击较慢，但能硬直大多数敌人，对格挡中的敌人造成额外伤害。',
+    tips: [
+      'Use heavy attacks to break through enemy shields and guards.',
+      'A fully charged heavy attack deals roughly 3× the damage of a light attack.',
+      'Heavy attacks have hyper armor during the swing — you won\'t flinch from light hits.',
+    ],
+    tipsZh: [
+      '用重攻击破除敌人的盾牌和格挡。',
+      '满蓄力重攻击伤害约为轻攻击的3倍。',
+      '重攻击挥击过程中有超级护甲，不会被轻攻击打断。',
+    ],
+  },
+  {
+    name: 'Timed Guard',
+    nameZh: '时机格挡',
+    desc: 'Block an attack at the exact moment it lands to perform a Timed Guard. This negates all damage and briefly staggers the attacker, opening a punish window. Requires a shield or weapon with block capability.',
+    descZh: '在攻击命中的精确时机格挡，执行时机格挡。可完全抵消伤害并短暂硬直攻击者，创造反击窗口。需要盾牌或具有格挡能力的武器。',
+    tips: [
+      'The timing window is roughly 0.2 seconds before impact — watch the enemy\'s arm, not their weapon.',
+      'A successful Timed Guard costs no stamina, unlike a regular block.',
+      'Timed Guard works against most human enemies and some beast attacks, but not unblockable moves (red glow).',
+    ],
+    tipsZh: [
+      '时机窗口约在命中前0.2秒——盯着敌人的手臂，而非武器。',
+      '成功的时机格挡不消耗体力，普通格挡则会。',
+      '时机格挡对大多数人类敌人和部分野兽攻击有效，但无法格挡不可格挡技能（红色光效）。',
+    ],
+  },
+  {
+    name: 'Counter Attack',
+    nameZh: '反击',
+    desc: 'After a successful Timed Guard or Perfect Dodge, press the attack button immediately to execute a Counter Attack. Counters deal bonus damage and cannot be interrupted. They are the highest damage-per-hit moves in the game.',
+    descZh: '成功时机格挡或完美闪避后，立即按攻击键执行反击。反击造成额外伤害且不可被打断，是游戏中单次伤害最高的动作。',
+    tips: [
+      'Counter Attacks deal 150–200% bonus damage depending on your weapon.',
+      'You have about 0.5 seconds after a Timed Guard to trigger the counter.',
+      'Counters bypass enemy armor — always counter rather than attacking normally after a parry.',
+    ],
+    tipsZh: [
+      '反击根据武器不同造成150-200%额外伤害。',
+      '时机格挡后约有0.5秒触发反击的窗口。',
+      '反击可无视敌人护甲——格挡成功后优先反击而非普通攻击。',
+    ],
+  },
+  {
+    name: 'Perfect Dodge',
+    nameZh: '完美闪避',
+    desc: 'Dodge at the last possible moment before an attack lands to trigger a Perfect Dodge. Time slows briefly, giving you a window to counter or reposition. Works against almost all attacks including unblockable ones.',
+    descZh: '在攻击命中前的最后时刻闪避，触发完美闪避。时间短暂减速，给你反击或重新定位的窗口。几乎对所有攻击有效，包括不可格挡技能。',
+    tips: [
+      'Perfect Dodge is your answer to unblockable (red glow) attacks — you cannot block them but you can dodge them.',
+      'The slow-motion window lasts about 1 second — use it to land a heavy attack or Counter.',
+      'Practice Perfect Dodge on weaker enemies first; the timing is consistent across enemy types.',
+    ],
+    tipsZh: [
+      '完美闪避是应对不可格挡（红色光效）攻击的唯一方式——无法格挡但可以闪避。',
+      '慢动作窗口持续约1秒——利用它发动重攻击或反击。',
+      '先在弱敌身上练习完美闪避；各类敌人的时机基本一致。',
+    ],
+  },
+  {
+    name: 'Grapple',
+    nameZh: '擒拿',
+    desc: 'When an enemy is staggered or off-balance, a Grapple prompt appears. Press the indicated button to grab the enemy and execute a powerful throw or slam. Grapples deal massive damage and cannot be blocked.',
+    descZh: '当敌人被硬直或失去平衡时，出现擒拿提示。按提示键抓住敌人并执行强力投技或摔击。擒拿造成巨大伤害且无法被格挡。',
+    tips: [
+      'Grapple prompts appear after a successful Timed Guard, heavy attack stagger, or when an enemy stumbles.',
+      'Throwing enemies off ledges with a Grapple is an instant kill regardless of their HP.',
+      'Some large enemies cannot be grappled — look for the prompt; if it doesn\'t appear, they\'re immune.',
+    ],
+    tipsZh: [
+      '擒拿提示在成功时机格挡、重攻击硬直或敌人踉跄后出现。',
+      '用擒拿将敌人扔下悬崖可无视血量直接击杀。',
+      '部分大型敌人无法被擒拿——查看提示，若未出现则免疫擒拿。',
+    ],
+  },
+  {
+    name: 'Ally Skills',
+    nameZh: '同伴技能',
+    desc: 'Your party members (Damiane, Oongka, and others) can be called in to perform powerful Ally Skills. These are triggered from the ability wheel and have cooldowns. Ally Skills can turn the tide of difficult fights.',
+    descZh: '你的队友（Damiane、Oongka等）可被召唤执行强力同伴技能。通过技能轮盘触发，有冷却时间。同伴技能可在困难战斗中扭转局势。',
+    tips: [
+      'Save Ally Skills for boss fights or large enemy groups — the cooldowns are long (60–90 seconds).',
+      'Damiane\'s Ally Skill deals ranged damage and is best used when you\'re surrounded.',
+      'Oongka\'s Ally Skill is a massive AoE slam — position enemies together before triggering it.',
+      'Ally Skills cannot be interrupted once activated.',
+    ],
+    tipsZh: [
+      '将同伴技能留给BOSS战或大群敌人——冷却时间较长（60-90秒）。',
+      'Damiane的同伴技能造成远程伤害，被包围时最为有效。',
+      'Oongka的同伴技能是大范围摔击——触发前先将敌人聚集在一起。',
+      '同伴技能一旦激活不可被打断。',
+    ],
+  },
+  {
+    name: 'Stamina Management',
+    nameZh: '体力管理',
+    desc: 'Sprinting, dodging, and some attacks consume stamina. Running out of stamina leaves you vulnerable — you cannot dodge or sprint until it recovers. Stamina regenerates automatically when you stop consuming it.',
+    descZh: '冲刺、闪避和部分攻击消耗体力。体力耗尽会使你陷入危险——无法闪避或冲刺直到恢复。停止消耗后体力自动恢复。',
+    tips: [
+      'Upgrade Stamina in the skill tree early — it\'s one of the most impactful early upgrades.',
+      'Don\'t spam dodge rolls; pace yourself and only dodge when you see an attack coming.',
+      'Standing still recovers stamina fastest — use brief pauses between enemy combos to recover.',
+    ],
+    tipsZh: [
+      '尽早在技能树中升级体力——这是前期最有价值的升级之一。',
+      '不要乱刷翻滚；控制节奏，只在看到攻击时才闪避。',
+      '站立不动时体力恢复最快——利用敌人连击间隙短暂停顿来恢复体力。',
+    ],
+  },
+]
+
+const combatFlowSteps = [
+  { en: 'Observe the enemy\'s attack pattern for 1–2 hits before committing to offense.', zh: '先观察敌人1-2次攻击规律，再发动进攻。' },
+  { en: 'Use light attacks to probe — switch to heavy if they\'re blocking.', zh: '用轻攻击试探——若敌人格挡则改用重攻击。' },
+  { en: 'Watch for the Timed Guard window on incoming attacks.', zh: '注意来袭攻击的时机格挡窗口。' },
+  { en: 'After a successful guard or Perfect Dodge, immediately Counter Attack.', zh: '成功格挡或完美闪避后，立即执行反击。' },
+  { en: 'When the Grapple prompt appears, always take it — it\'s free massive damage.', zh: '出现擒拿提示时务必执行——这是免费的巨额伤害。' },
+  { en: 'Save Ally Skills and consumables for when HP drops below 40%.', zh: '将同伴技能和消耗品留到血量低于40%时使用。' },
+]
+
 // ── Beginner Guide component ──────────────────────────────────────────────────
 
 function BeginnerGuide({ locale }: { locale: Locale }) {
@@ -329,6 +475,68 @@ function BossGuide({ locale }: { locale: Locale }) {
   )
 }
 
+// ── Combat Guide component ────────────────────────────────────────────────────
+
+function CombatGuide({ locale }: { locale: Locale }) {
+  const isZh = locale === 'zh'
+  return (
+    <div className="container py-12 max-w-4xl">
+      <div className="flex items-center gap-4 mb-4">
+        <div className="h-px flex-1 bg-brand-border" />
+        <h1 className="text-xl tracking-[0.3em] uppercase text-brand-primary" style={{ fontFamily: 'Cinzel, serif' }}>
+          {t(locale, 'nav_guides_combat')}
+        </h1>
+        <div className="h-px flex-1 bg-brand-border" />
+      </div>
+      <p className="text-center text-brand-muted text-xs tracking-widest uppercase mb-12" style={{ fontFamily: 'Cinzel, serif' }}>
+        {isZh ? '掌握Pywel大陆的战斗系统' : 'Master every mechanic in Pywel\'s combat system'}
+      </p>
+
+      {/* Combat Flow */}
+      <div className="bg-brand-card border border-brand-border p-6 mb-10">
+        <div className="text-brand-primary text-xs tracking-widest uppercase mb-4 font-bold" style={{ fontFamily: 'Cinzel, serif' }}>
+          {isZh ? '战斗流程' : 'Combat Flow'}
+        </div>
+        <ol className="space-y-2">
+          {combatFlowSteps.map((step, i) => (
+            <li key={i} className="flex items-start gap-3 text-gray-400 text-sm leading-relaxed">
+              <span className="text-brand-primary font-bold shrink-0 w-5" style={{ fontFamily: 'Cinzel, serif' }}>{i + 1}.</span>
+              {isZh ? step.zh : step.en}
+            </li>
+          ))}
+        </ol>
+      </div>
+
+      {/* Mechanics */}
+      <div className="space-y-4">
+        {combatMechanics.map((m) => (
+          <div key={m.name} className="bg-brand-card border border-brand-border overflow-hidden hover:border-brand-primary/50 transition-colors">
+            <div className="bg-black/30 border-b border-brand-border px-5 py-3">
+              <span className="text-white font-bold" style={{ fontFamily: 'Cinzel, serif' }}>{isZh ? m.nameZh : m.name}</span>
+            </div>
+            <div className="p-5 space-y-3">
+              <p className="text-gray-400 text-sm leading-relaxed">{isZh ? m.descZh : m.desc}</p>
+              <div>
+                <div className="text-brand-primary text-xs tracking-widest uppercase mb-2 font-bold">
+                  {isZh ? '技巧' : 'Tips'}
+                </div>
+                <ul className="space-y-1">
+                  {(isZh ? m.tipsZh : m.tips).map((tip, i) => (
+                    <li key={i} className="flex items-start gap-2 text-gray-400 text-sm leading-relaxed">
+                      <span className="text-brand-primary mt-0.5 shrink-0">▸</span>
+                      {tip}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 function BossCard({ boss, isZh }: { boss: Boss; isZh: boolean }) {
   return (
     <div className="bg-brand-card border border-brand-border overflow-hidden hover:border-brand-primary/50 transition-colors">
@@ -381,6 +589,14 @@ export default function GuidePage({ locale, slug }: { locale: Locale; slug: stri
     return (
       <Layout locale={locale} title={title}>
         <BossGuide locale={locale} />
+      </Layout>
+    )
+  }
+
+  if (slug === 'combat') {
+    return (
+      <Layout locale={locale} title={title}>
+        <CombatGuide locale={locale} />
       </Layout>
     )
   }

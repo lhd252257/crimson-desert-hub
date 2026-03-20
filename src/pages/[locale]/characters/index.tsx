@@ -13,6 +13,16 @@ export default function CharactersPage({ locale }: { locale: Locale }) {
       skills: ['char_kliff_skill1', 'char_kliff_skill2', 'char_kliff_skill3', 'char_kliff_skill4'],
     },
     {
+      slug: 'damiane',
+      name: 'Damiane',
+      role: locale === 'zh' ? '迅捷剑客' : 'Swift Swordswoman',
+      description: locale === 'zh'
+        ? 'Damiane是一位精通多种武器的多才多艺战士，擅长使用巨剑、细剑、步枪、手枪和她标志性的机械伞。她的机械伞不仅是武器，更是滑翔工具，让她能够在Pywel大陆的天空岛屿间自由穿梭。'
+        : 'Damiane is a versatile fighter proficient with Greatsword, Rapier, Rifle, Pistol, and her signature Parasol Machine. The mechanical parasol doubles as a gliding tool, letting her traverse sky islands and strike from above.',
+      image: '/images/03.jpg',
+      skills: [],
+    },
+    {
       slug: 'oongka',
       name: 'Oongka',
       role: t(locale, 'char_oongka_role'),
@@ -40,8 +50,12 @@ export default function CharactersPage({ locale }: { locale: Locale }) {
 
   const skillsMap: Record<string, Record<string, string[]>> = {
     kliff: {
-      en: ['Master swordsmanship and combat leadership', 'Strategic planning and tactical decision-making', 'Unwavering determination and resilience', 'Ability to inspire and unite scattered allies'],
-      zh: ['精湛的剑术和战斗领导能力', '战略规划和战术决策', '坚定不移的决心和韧性', '激励和团结分散盟友的能力'],
+      en: ['Son of Martinus, legendary founder of the Greymanes mercenary company', 'Master swordsmanship with Sword & Shield, Spear, and Fists', 'Combat leadership and tactical decision-making', 'Ability to inspire and unite scattered allies'],
+      zh: ['传奇灰鬃雇佣兵团创始人Martinus之子', '精通剑盾、长矛和徒手格斗', '战斗领导力与战术决策能力', '激励和团结分散盟友的能力'],
+    },
+    damiane: {
+      en: ['Parasol Machine for gliding, aerial attacks, and sky island traversal', 'Dual-wield Rapier and Pistol for rapid close-to-mid range combos', 'Greatsword for wide cleaving arcs against groups', 'Rifle for long-range precision before enemies close distance'],
+      zh: ['机械伞用于滑翔、空中攻击和天空岛屿穿越', '细剑与手枪双持，快速近中距离连击', '巨剑大范围横扫，对付敌人群体', '步枪远程精准射击，在敌人靠近前消灭目标'],
     },
     oongka: {
       en: ['Exceptional combat skills and battlefield awareness', 'Deep knowledge of Pywel\'s terrain and dangers', 'Loyalty and dedication to the Grey Mane cause', 'Survival expertise in harsh environments'],
