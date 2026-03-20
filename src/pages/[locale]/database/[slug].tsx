@@ -57,62 +57,65 @@ const weaponList: WeaponRow[] = [
   { name: 'Warspike Spear',              type: 'Two-Handed', atk: 14, def: 0, atkSpd: 0, movSpd: 0, crit: 0 },
 ]
 
-type CharWeapon = { name: string; type: string; desc: string }
-type CharBlock  = { char: string; role: string; weapons: CharWeapon[] }
+type CharWeapon = { name: string; nameZh: string; type: string; desc: string; descZh: string }
+type CharBlock  = { char: string; role: string; roleZh: string; weapons: CharWeapon[] }
 
 const charWeapons: CharBlock[] = [
   {
-    char: 'Kliff', role: 'Greymane Captain',
+    char: 'Kliff', role: 'Greymane Captain', roleZh: '灰鬃队长',
     weapons: [
-      { name: 'Sword & Shield', type: 'Melee',  desc: 'Balanced attack and block. Default setup with reliable speed and guard.' },
-      { name: 'Spear',          type: 'Melee',  desc: 'Extended reach for keeping distance and controlling groups with sweeping attacks.' },
-      { name: 'Fists',          type: 'Melee',  desc: 'Unarmed strikes for close-quarters grappling and combo interruption.' },
+      { name: 'Sword & Shield', nameZh: '剑与盾', type: 'Melee',  desc: 'Balanced attack and block. Default setup with reliable speed and guard.', descZh: '攻守均衡。默认配置，速度和防御都很可靠。' },
+      { name: 'Spear',          nameZh: '长矛',   type: 'Melee',  desc: 'Extended reach for keeping distance and controlling groups with sweeping attacks.', descZh: '攻击距离长，可保持距离并用横扫攻击控制人群。' },
+      { name: 'Fists',          nameZh: '拳击',   type: 'Melee',  desc: 'Unarmed strikes for close-quarters grappling and combo interruption.', descZh: '徒手近身格斗，适合擒拿和打断连击。' },
     ],
   },
   {
-    char: 'Damiane', role: 'Swift Swordswoman',
+    char: 'Damiane', role: 'Swift Swordswoman', roleZh: '迅捷剑客',
     weapons: [
-      { name: 'Greatsword',      type: 'Melee',   desc: 'Heavy two-handed weapon with wide cleaving arcs. Slow but hits entire groups at once.' },
-      { name: 'Rapier',          type: 'Melee',   desc: "Fastest option. Rapid thrusts and parries, often paired with the pistol." },
-      { name: 'Rifle',           type: 'Ranged',  desc: 'Long-range precision firearm for picking off targets before they close distance.' },
-      { name: 'Pistol',          type: 'Ranged',  desc: 'Mid-range sidearm used alongside the Rapier in dual-wield combos.' },
-      { name: 'Parasol Machine', type: 'Special', desc: 'Signature mechanical parasol enabling gliding, aerial attacks, and unique traversal.' },
+      { name: 'Greatsword',      nameZh: '巨剑',     type: 'Melee',   desc: 'Heavy two-handed weapon with wide cleaving arcs. Slow but hits entire groups at once.', descZh: '沉重的双手武器，宽幅劈砍弧度大。速度慢但可同时命中整个群体。' },
+      { name: 'Rapier',          nameZh: '细剑',     type: 'Melee',   desc: 'Fastest option. Rapid thrusts and parries, often paired with the pistol.', descZh: '最快的选项。快速突刺和格挡，常与手枪配合使用。' },
+      { name: 'Rifle',           nameZh: '步枪',     type: 'Ranged',  desc: 'Long-range precision firearm for picking off targets before they close distance.', descZh: '远程精准火器，在敌人靠近前消灭目标。' },
+      { name: 'Pistol',          nameZh: '手枪',     type: 'Ranged',  desc: 'Mid-range sidearm used alongside the Rapier in dual-wield combos.', descZh: '中距离副武器，与细剑配合进行双持连击。' },
+      { name: 'Parasol Machine', nameZh: '机械伞',   type: 'Special', desc: 'Signature mechanical parasol enabling gliding, aerial attacks, and unique traversal.', descZh: '标志性机械伞，可滑翔、空中攻击和独特穿越。' },
     ],
   },
   {
-    char: 'Oongka', role: 'Orc Brawler',
+    char: 'Oongka', role: 'Orc Brawler', roleZh: '兽人斗士',
     weapons: [
-      { name: 'Two-Handed Axe', type: 'Melee',  desc: "Primary weapon. Devastating cleave that breaks guard and shreds heavy armor." },
-      { name: 'Hand Cannon',    type: 'Ranged', desc: 'Explosive close-to-mid range cannon. Massive blast radius for area denial.' },
+      { name: 'Two-Handed Axe', nameZh: '双手巨斧', type: 'Melee',  desc: 'Primary weapon. Devastating cleave that breaks guard and shreds heavy armor.', descZh: '主武器。毁灭性劈砍，可破防并撕碎重甲。' },
+      { name: 'Hand Cannon',    nameZh: '手炮',     type: 'Ranged', desc: 'Explosive close-to-mid range cannon. Massive blast radius for area denial.', descZh: '爆炸性近中距离火炮。巨大爆炸半径用于区域封锁。' },
     ],
   },
 ]
 
-type WeaponType = { name: string; desc: string }
+type WeaponType = { name: string; nameZh: string; desc: string; descZh: string }
 
-const weaponTypes: { category: string; types: WeaponType[] }[] = [
+const weaponTypes: { category: string; categoryZh: string; types: WeaponType[] }[] = [
   {
     category: 'One-Handed',
+    categoryZh: '单手武器',
     types: [
-      { name: 'Swords',  desc: 'Fast attacks and good defense when paired with a shield, making them reliable in most fights.' },
-      { name: 'Axes',    desc: 'Deliver slower but heavier hits than swords.' },
+      { name: 'Swords',  nameZh: '剑', desc: 'Fast attacks and good defense when paired with a shield, making them reliable in most fights.', descZh: '攻击速度快，配合盾牌防御出色，在大多数战斗中表现稳定可靠。' },
+      { name: 'Axes',    nameZh: '斧', desc: 'Deliver slower but heavier hits than swords.', descZh: '攻击速度比剑慢，但每击伤害更重。' },
     ],
   },
   {
     category: 'Two-Handed',
+    categoryZh: '双手武器',
     types: [
-      { name: 'Spears',     desc: 'Long reach, allowing you to attack enemies from a safer distance.' },
-      { name: 'Greataxes',  desc: 'Massive damage with wide swings that hit multiple enemies. Feature devastating grounded and jumping AoE attacks.' },
-      { name: 'Greatswords', desc: 'Strong damage with wide attacks that knock back enemies far. Slower than swords and require careful timing.' },
+      { name: 'Spears',      nameZh: '长矛', desc: 'Long reach, allowing you to attack enemies from a safer distance.', descZh: '攻击距离长，可以在更安全的距离攻击敌人。' },
+      { name: 'Greataxes',   nameZh: '巨斧', desc: 'Massive damage with wide swings that hit multiple enemies. Feature devastating grounded and jumping AoE attacks.', descZh: '宽幅横扫造成巨大伤害，可同时命中多个敌人。拥有强力的地面和跳跃范围攻击。' },
+      { name: 'Greatswords', nameZh: '巨剑', desc: 'Strong damage with wide attacks that knock back enemies far. Slower than swords and require careful timing.', descZh: '宽幅攻击造成强力伤害，可将敌人击飞很远。比剑慢，需要精准把握时机。' },
     ],
   },
   {
     category: 'Ranged',
+    categoryZh: '远程武器',
     types: [
-      { name: 'Bows',         desc: 'Attack enemies from a safe distance with arrows.' },
-      { name: 'Pistols',      desc: 'Fire quickly while staying nimble. Dodge between shots, unlike the stationary charged shots of rifles.' },
-      { name: 'Rifles',       desc: 'High damage at long range with precise shots. Effective with both regular and charged shots.' },
-      { name: 'Hand Cannons', desc: 'Fire powerful charged shots that deal heavy damage.' },
+      { name: 'Bows',         nameZh: '弓', desc: 'Attack enemies from a safe distance with arrows.', descZh: '用箭矢从安全距离攻击敌人。' },
+      { name: 'Pistols',      nameZh: '手枪', desc: 'Fire quickly while staying nimble. Dodge between shots, unlike the stationary charged shots of rifles.', descZh: '射击快速且保持灵活。可在射击间隙闪避，不像步枪需要站立蓄力。' },
+      { name: 'Rifles',       nameZh: '步枪', desc: 'High damage at long range with precise shots. Effective with both regular and charged shots.', descZh: '远距离精准射击造成高伤害。普通射击和蓄力射击均有效。' },
+      { name: 'Hand Cannons', nameZh: '手炮', desc: 'Fire powerful charged shots that deal heavy damage.', descZh: '发射强力蓄力弹，造成重击伤害。' },
     ],
   },
 ]
@@ -130,10 +133,7 @@ const typeColor: Record<string, string> = {
 // ── Weapons page ─────────────────────────────────────────────────────────────
 
 function WeaponsPage({ locale }: { locale: Locale }) {
-  const statBadge = (val: number, label: string) =>
-    val !== 0 ? (
-      <span className="text-brand-primary text-xs font-bold">+{val} {label}</span>
-    ) : null
+  const isZh = locale === 'zh'
 
   return (
     <div className="container py-12">
@@ -192,14 +192,14 @@ function WeaponsPage({ locale }: { locale: Locale }) {
             <div key={cat.category} className="bg-brand-card border border-brand-border overflow-hidden">
               <div className="bg-black/30 border-b border-brand-border px-5 py-3">
                 <span className="text-brand-primary text-xs font-bold tracking-widest uppercase" style={{ fontFamily: 'Cinzel, serif' }}>
-                  {cat.category}
+                  {isZh ? cat.categoryZh : cat.category}
                 </span>
               </div>
               <div className="divide-y divide-brand-border/30">
                 {cat.types.map((wt) => (
                   <div key={wt.name} className="flex gap-4 px-5 py-3 hover:bg-white/[0.02] transition-colors">
-                    <span className="text-white font-bold text-sm w-32 shrink-0">{wt.name}</span>
-                    <span className="text-gray-400 text-sm leading-relaxed">{wt.desc}</span>
+                    <span className="text-white font-bold text-sm w-32 shrink-0">{isZh ? wt.nameZh : wt.name}</span>
+                    <span className="text-gray-400 text-sm leading-relaxed">{isZh ? wt.descZh : wt.desc}</span>
                   </div>
                 ))}
               </div>
@@ -221,14 +221,14 @@ function WeaponsPage({ locale }: { locale: Locale }) {
             <div key={block.char} className="bg-brand-card border border-brand-border overflow-hidden">
               <div className="flex items-center gap-3 bg-black/30 border-b border-brand-border px-5 py-3">
                 <span className="text-white font-bold">{block.char}</span>
-                <span className="text-brand-muted text-xs tracking-widest uppercase">{block.role}</span>
+                <span className="text-brand-muted text-xs tracking-widest uppercase">{isZh ? block.roleZh : block.role}</span>
               </div>
               <div className="divide-y divide-brand-border/30">
                 {block.weapons.map((w) => (
                   <div key={w.name} className="grid grid-cols-[160px_80px_1fr] gap-4 px-5 py-3 hover:bg-white/[0.02] transition-colors items-start">
-                    <span className="text-white font-bold text-sm">{w.name}</span>
+                    <span className="text-white font-bold text-sm">{isZh ? w.nameZh : w.name}</span>
                     <span className={`text-xs font-bold tracking-wide uppercase ${typeColor[w.type] ?? 'text-gray-400'}`}>{w.type}</span>
-                    <span className="text-gray-400 text-sm leading-relaxed">{w.desc}</span>
+                    <span className="text-gray-400 text-sm leading-relaxed">{isZh ? w.descZh : w.desc}</span>
                   </div>
                 ))}
               </div>
