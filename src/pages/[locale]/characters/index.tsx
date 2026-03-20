@@ -19,7 +19,7 @@ export default function CharactersPage({ locale }: { locale: Locale }) {
       description: locale === 'zh'
         ? 'Damiane是一位精通多种武器的多才多艺战士，擅长使用巨剑、细剑、步枪、手枪和她标志性的机械伞。她的机械伞不仅是武器，更是滑翔工具，让她能够在Pywel大陆的天空岛屿间自由穿梭。'
         : 'Damiane is a versatile fighter proficient with Greatsword, Rapier, Rifle, Pistol, and her signature Parasol Machine. The mechanical parasol doubles as a gliding tool, letting her traverse sky islands and strike from above.',
-      image: '/images/03.jpg',
+      image: '/images/05.jpg',
       skills: [],
     },
     {
@@ -27,7 +27,7 @@ export default function CharactersPage({ locale }: { locale: Locale }) {
       name: 'Oongka',
       role: t(locale, 'char_oongka_role'),
       description: t(locale, 'char_oongka_desc'),
-      image: '/images/05.jpg',
+      image: '/images/06.jpg',
       skills: ['char_oongka_skill1', 'char_oongka_skill2', 'char_oongka_skill3', 'char_oongka_skill4'],
     },
     {
@@ -35,7 +35,7 @@ export default function CharactersPage({ locale }: { locale: Locale }) {
       name: 'Yann',
       role: t(locale, 'char_yann_role'),
       description: t(locale, 'char_yann_desc'),
-      image: '/images/06.jpg',
+      image: '/images/08.jpg',
       skills: ['char_yann_skill1', 'char_yann_skill2', 'char_yann_skill3', 'char_yann_skill4'],
     },
     {
