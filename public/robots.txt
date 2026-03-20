@@ -2,7 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://yourdomain.com/sitemap.xml
-
-# Disallow admin or private paths (if any in future)
-# Disallow: /admin/
+Sitemap: https://crimson-desert.org/sitemap.xml
