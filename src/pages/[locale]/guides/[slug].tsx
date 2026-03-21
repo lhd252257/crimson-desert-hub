@@ -164,6 +164,66 @@ const beginnerTips: Tip[] = [
     body: 'NPCs often give hints about hidden quests, treasure locations, and lore. Some side quests only trigger after speaking to specific characters. Don\'t rush past settlements.',
     bodyZh: 'NPC经常提供隐藏任务、宝藏位置和世界观的线索。部分支线任务只有与特定角色交谈后才会触发。不要匆忙路过定居点。',
   },
+  {
+    title: 'Reputation Doesn\'t Matter Much Early',
+    titleZh: '游戏初期声望并不重要',
+    body: 'When you steal and see your local reputation drop, don\'t panic. Losses from stealing or even killing can be offset just by completing faction quests and main story missions. By Chapter 3 your Hernand reputation will be high naturally — don\'t stress over early slip-ups.',
+    bodyZh: '偷窃后看到声望下降不要慌。完成阵营任务和主线剧情就能弥补损失。到了第三章，赫尔南德的声望会自然提升——不必为早期的失误烦恼。',
+  },
+  {
+    title: 'Check the Contribution Shop',
+    titleZh: '不要错过贡献商店',
+    body: 'High reputation in Hernand unlocks the Contribution Shop in the castle, where you can spend reputation points on powerful weapons, armor, and rare items — no gold required. Complete quests and avoid crimes to build your contribution rank.',
+    bodyZh: '在赫尔南德城堡拥有高声望后，可前往贡献商店用声望点数兑换强力武器、盔甲等珍贵物品，无需花费金币。完成任务并避免犯罪即可提升贡献值。',
+  },
+  {
+    title: 'Reload Instead of Going to Jail',
+    titleZh: '被抓就读档，不要坐牢',
+    body: 'If guards catch you, the best move is to pause and reload your last save rather than accept arrest. This avoids paying the bounty — which can be very expensive depending on your crimes.',
+    bodyZh: '被守卫抓住时，最好暂停游戏读取最近存档，而不是乖乖被捕。这样可以避免支付赏金——赏金金额可能相当高昂。',
+  },
+  {
+    title: 'Pay a Penance, Not the Fine',
+    titleZh: '缴纳赎罪金，而非罚款',
+    body: 'If you want to clear your bounty, the fastest way is to visit a nearby church and pay for an absolution. You still pay, but on your own terms and without sitting through a lengthy arrest sequence.',
+    bodyZh: '想清除悬赏的话，最便捷的方式是前往附近教堂购买赦免令。虽然仍需付钱，但可以按自己意愿行事，省去漫长的逮捕流程。',
+  },
+  {
+    title: 'Don\'t Buy What You Can Take',
+    titleZh: '能拿的东西不要买',
+    body: 'You can buy meat from butchers, or you can loot it from bandit camps for free. Most camps have meat stacked up — clear out the enemies and take it. The same applies to other supplies like cooking oil.',
+    bodyZh: '可以从肉铺买肉，也可以直接从土匪营地抢——大多数营地都堆着肉。清场后顺手带走，其他补给如食用油也同理，省下辛苦赚来的金币。',
+  },
+  {
+    title: 'Bounties Are Optional, Not Essential',
+    titleZh: '赏金任务是附加项，并非必需',
+    body: 'Bounty missions pay well but take a long time. Most targets are far away and must be escorted back alive (killing them halves the reward). Only bother with bounties if you happen to be nearby.',
+    bodyZh: '赏金任务奖励丰厚但耗时极长。大多数目标离你很远，还必须活着押送回来（杀死则赏金减半）。只有恰好路过时才值得顺手完成。',
+  },
+  {
+    title: 'Fill Your Pockets with Food Before a Fight',
+    titleZh: '战斗前在口袋里装满食物',
+    body: 'In Crimson Desert you have full inventory access during combat, including boss fights. Heal freely with food mid-fight. Check descriptions first: grains and meat restore HP, while fruits and berries restore Spirit.',
+    bodyZh: '《深红沙漠》中战斗时（包括Boss战）可完全访问物品栏，随时用食物回血。注意查看说明：谷物和肉类恢复生命值，水果和浆果补充精神值。',
+  },
+  {
+    title: 'Cooked Food Is Always Better',
+    titleZh: '熟食总是比生食更好',
+    body: 'Cooked food is more effective than raw food every time. You unlock basic recipes like roasted meat and roasted grain from the start. Walk up to a campfire, throw on some meat or oats, and get a meal that restores most of your health.',
+    bodyZh: '熟食效果始终优于生食。游戏初期就能获得烤肉、烤谷物等基本食谱。走到篝火旁，扔上肉或燕麦，就能得到可以恢复大部分生命值的餐食。',
+  },
+  {
+    title: 'Force Palm Is Your Friend',
+    titleZh: '掌力是你的好帮手',
+    body: 'You unlock Force Palm early and should use it constantly. It interrupts enemy attacks (including some boss attacks), can hit multiple nearby enemies at once, and — most importantly — lowers the defense of targets it hits, making it essential against high-defense enemies.',
+    bodyZh: '游戏初期就能学会掌力，应当频繁使用。它能打断敌人攻击（甚至包括部分Boss攻击），可同时命中多个近身敌人，最重要的是能降低被击中敌人的防御力，对高防御敌人至关重要。',
+  },
+  {
+    title: 'Kick to Create Openings',
+    titleZh: '用踢击制造攻击机会',
+    body: 'After defeating knight Matthias in the main story, you unlock a powerful kick move. It doesn\'t lower defense, but it knocks enemies back and drops smaller foes to the ground — creating a window to rush in for more damage or escape when overwhelmed.',
+    bodyZh: '在主线中击败骑士马蒂亚斯后，解锁踢击技能。踢击不降低防御但会击退敌人，体型较小的敌人还会被打倒在地——为你创造冲上前追加伤害或在危急时撤退的机会。',
+  },
 ]
 
 // ── Boss data ─────────────────────────────────────────────────────────────────
